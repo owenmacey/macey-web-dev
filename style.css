@@ -1,9 +1,10 @@
-:root {
+        :root {
             --background: #0F1117;
             --surface: #1A1D26;
             --primary: #4463E6;
             --primary-hover: #5C7AFF;
             --accent: #9B6BFF;
+            --accent-hover: #7f44ff;
             --text-primary: #F9FAFC;
             --text-secondary: rgba(255,255,255,0.7);
             --divider: #2B2E3B;
@@ -14,7 +15,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
             font-weight: 500;
@@ -28,7 +28,6 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-
         /* Navigation */
         nav {
             position: sticky;
@@ -154,7 +153,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 91, 0.4);
+            box-shadow: 0 8px 25px var(--accent-hover);
         }
 
         .btn-secondary {
@@ -167,7 +166,7 @@
             background: var(--accent);
             color: var(--text-primary);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 91, 0.3);
+            box-shadow: 0 8px 25px var(--accent-hover);
         }
 
         /* Services Section */
@@ -317,6 +316,9 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+            .portfolio-image{
+            opacity: 100%;
+            }
         }
 
         /* Portfolio Section */
@@ -339,19 +341,30 @@
             transition: all 0.3s ease;
         }
 
+
+
         .portfolio-item:hover {
             transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(68, 99, 230, 0.2);
         }
 
         .portfolio-image {
             height: 200px;
-            background: linear-gradient(45deg, var(--primary), #2A3D8F);
+            background-image: url(La-Vie-En-Ross-SS.png);
+            background-size: cover; /* Maintain aspect ratio */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Avoid repeating the image */
+            opacity: 80%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             font-size: 18px;
             font-weight: 600;
+            transition: opacity 0.3s ease-in;
+        }
+        .portfolio-image:hover{
+            opacity: 100%;
         }
 
         .portfolio-content {
@@ -364,6 +377,11 @@
             font-weight: 600;
             margin-bottom: 8px;
             color: var(--primary);
+        }
+        .portfolio-grid a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         /* Testimonials */
