@@ -1,6 +1,6 @@
         :root {
             --background: #0F1117;
-            --surface: #1A1D26;
+            --surface: hwb(225 10% 85%);
             --primary: #4463E6;
             --primary-hover: #5C7AFF;
             --accent: #9B6BFF;
@@ -317,7 +317,7 @@
                 grid-template-columns: 1fr;
             }
             .portfolio-image{
-            opacity: 100%;
+                opacity: 100%;
             }
         }
 
